@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+
+.bg-transparent { 
+    background-color: transparent; 
+}
+
+@tailwind utilities;
+.section-title {
+    @apply text-2xl font-bold mb-6 text-amber-600;
+}
+.wrapper {
+    @apply py-10 px-6;
+}
+
+.product-section {
+    .product-section-vertical {
+        &__tabs {
+            @apply w-full my-2;
+        }
+
+        &__item {
+            @apply relative pl-0 pr-2 mx-2;
+            &:after {
+                content: "";
+                width: 0.06rem;
+                height: 60%;
+                background-color: #535353;
+                position: absolute;
+                top: 0.2rem;
+                right: -0.5rem;
+            }
+        }
+
+        &__item-title {
+            @apply tracking-normal text-gray-700 text-xs font-semibold;
+        }
+
+        &--active-item {
+            @apply border-b-2 border-primary;
+        }
+        &--last-item {
+            &:after {
+                display: none;
+            }
+        }
+
+        &__imageWrapper {
+            @apply w-full mx-auto;
+            img {
+                @apply w-full;
+            }
+        }
+
+        &__product-name {
+            @apply pb-1 text-lg font-bold;
+        }
+
+        &__product-tag {
+            @apply hidden bg-yellow-600;
+        }
+
+        &__product-description {
+            @apply mb-3;
+        }
+    }
+}

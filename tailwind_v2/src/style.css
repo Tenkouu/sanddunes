@@ -1,0 +1,472 @@
+@tailwind base;
+@tailwind components;
+
+.header {
+    height: 400px;
+}
+
+.trailer {
+    height: 300px;
+}
+
+.btn-primary{
+    @apply text-orange-300 bg-transparent uppercase border border-orange-300 px-8 py-2 inline-block rounded;
+}
+
+.btn-primary:hover{
+    @apply bg-orange-300 text-white cursor-pointer;
+}
+
+.header .hero {
+    z-index: -10;
+}
+
+.movie-card-container{
+    @apply flex flex-shrink-0;
+}
+
+.movie-card-link{
+    @apply relative block mx-2;
+}
+
+.movie-card-content{
+    @apply absolute inset-0 p-4 hidden flex-col justify-end text-white cursor-pointer;
+}
+
+.movie-card-title{
+    @apply text-xl mb-2;
+}
+
+.movie-card-text{
+    @apply leading-normal select-none;
+}
+
+.movie-card-image{
+    @apply w-64 h-64 object-cover object-center hover:opacity-50;
+}
+
+@screen md {
+    .header{
+        height: 650px;
+    }
+    .trailer {
+        height: 600px;
+    }
+    .btn-primary{
+        @apply text-orange-300 bg-transparent uppercase border border-orange-300 px-10 py-3 inline-block rounded;
+    }
+}
+.bg-transparent { 
+    background-color: transparent; 
+}
+
+@tailwind utilities;
+
+.btn{
+    @apply px-6.5 py-3.5 mr-4 text-sm font-semibold;
+}
+.btn--orange {
+    @apply bg-primary text-white border border-primary font-main transition-colors duration-500 ease-out;
+}
+.btn--orange:hover {
+    @apply bg-amber-600 transition-colors duration-500 ease-out;
+}
+.btn--white {
+    @apply bg-white text-black border border-black font-main;
+}
+.btn--white:hover {
+    @apply bg-black text-white transition-colors duration-500 ease-out;
+}
+.btn--black {
+    @apply bg-black text-white border border-black font-main;
+}
+.btn--black:hover {
+    @apply bg-gray-800 transition-colors duration-500 ease-out;
+}
+.section-title {
+    @apply text-2xl font-bold mb-7.5 font-sub;
+}
+
+.product-section-vertical__tabs {
+        @apply w-full my-2;
+}
+
+.product-section-vertical__item {
+    @apply relative pl-0 pr-2 mx-2;
+}
+.product-section-vertical__item:after {
+            content: "";
+            width: 0.06rem;
+            height: 60%;
+            background-color: #535353;
+            position: absolute;
+            top: 0.2rem;
+            right: -0.5rem;
+}
+
+
+.product-section-vertical__item-title {
+    @apply tracking-normal text-gray-700 text-xs font-semibold;
+}
+
+.product-section-vertical--active-item {
+    @apply border-b-2 border-primary;
+}
+.product-section-vertical--last-item {
+    after {
+        display: none;
+    }
+}
+
+.product-section-vertical__imageWrapper {
+    @apply w-full mx-auto;
+}
+
+.product-section-vertical__product-name {
+    @apply pb-1 text-lg font-bold;
+}
+
+.product-section-vertical__product-tag {
+@apply bg-yellow-600 text-white font-bold text-xs uppercase py-1 px-2;
+}
+
+.product-section-vertical__product-description {
+@apply mb-3;
+}
+
+
+.product-section-horizontal__item {
+@apply relative px-1 py-2;
+}
+
+.product-section-horizontal__product-tag {
+@apply bg-primary text-white font-bold text-xs uppercase py-1 px-2 ml-2 w-6 h-3;
+}
+
+.product-section-horizontal--active-item {
+@apply py-6;
+}
+
+.product-section-horizontal--active-item .up-down-buttons {
+@apply absolute flex flex-col h-8 -ml-8 pb-6;
+}
+
+.product-section-horizontal--active-item .product-section-horizontal__product-description{
+@apply mb-6;
+}
+
+.product-section-horizontal--active-item .product-section-horizontal__item-title{
+@apply pb-1 text-lg text-black font-extrabold;
+}
+
+
+.product-section-horizontal--inactive-item .product-section-horizontal__item-title{
+    @apply text-gray-400 font-semibold;
+}
+.product-section-horizontal--inactive-item .product-section-horizontal__button-wrapper {
+    @apply hidden;
+}
+.product-section-horizontal--inactive-item .up-down-buttons {
+    @apply hidden;
+}
+
+.product-section-horizontal--inactive-item .product-section-horizontal__product-description {
+    @apply hidden;
+}
+
+.news-section {
+    @apply bg-gray-100 w-full;
+}
+
+.news-section__featured-card {
+    @apply mb-3;
+}
+
+.news-section__featured-card-imageWrapper {
+    @apply w-full h-auto;
+}
+
+.news-section__news-card {
+    @apply flex flex-row w-full mb-6;
+}
+.news-section__news-card-imageWrapper {
+    @apply w-1/2;
+}
+.news-section__news-card-textWrapper {
+    @apply w-1/2 ml-5;
+}
+
+.news-section__featured-card-title {
+    @apply text-sm font-bold mt-2 mb-1 uppercase font-sub;
+}
+.news-section__featured-card-title:hover {
+    @apply text-primary;
+}
+
+.news-section__news-card-title{
+    @apply font-sub text-xs font-bold mt-2;
+}
+.news-section__news-card-title:hover{
+    @apply text-primary;
+}
+
+.read-more {
+    @apply text-xs font-medium text-black mt-2;
+}
+.read-more:hover {
+    @apply text-primary;
+}
+.card-title {
+    @apply text-sm font-bold my-2;
+}
+.card-category {
+    @apply text-xs font-medium text-gray-600;
+}
+
+.media-panel {
+    @apply relative flex flex-col h-auto;
+    background: #fff;
+}
+
+.media-panel__text-wrapper {
+    @apply flex flex-col items-center justify-center w-full h-auto p-5 pb-10;
+}
+
+.media-panel__inner-text{
+    @apply w-full; 
+}
+
+.media-panel__title{
+    @apply text-2xl font-bold mb-5;
+}
+
+.media-panel__desc{
+    @apply text-base mb-10;
+}
+
+.media-panel__image-wrapper{
+    @apply w-full h-auto;
+}
+
+.media-panel__image{
+    @apply w-full h-auto;
+}
+.media-panel--full-image {
+    @apply bg-gray-900 text-white;
+}
+
+
+
+.share-media-phone__columns {
+    @apply flex flex-col w-full flex-shrink-0;
+}
+
+.share-media-phone__column {
+    @apply flex flex-col w-full h-auto overflow-hidden;
+}
+
+.share-media-phone__item {
+    @apply relative m-1 cursor-pointer;
+}
+
+.share-media-phone__item:hover .share-media-phone__item-overlay{
+    @apply block;
+}
+.share-media-phone__item:hover .share-media-phone__item-text{
+    @apply block;
+}
+
+.share-media-phone__item-overlay {
+    @apply absolute hidden h-full w-full bg-black opacity-75 z-0;
+}
+
+.share-media-phone__item-text{
+    @apply absolute inset-0 p-4 text-gray-400 text-base hidden z-10 font-main;
+}
+
+
+@screen sm {
+    .share-media-phone__columns {
+        @apply flex flex-row w-full mx-auto;
+    }
+    
+    .share-media-phone__column {
+        @apply flex flex-col w-1/2 h-auto;
+    }
+    
+    .share-media-phone__item {
+        @apply relative m-1 cursor-pointer;
+    }
+    
+    .share-media-phone__item:hover .share-media-phone__item-overlay{
+        @apply block;
+    }
+    .share-media-phone__item:hover .share-media-phone__item-text{
+        @apply block;
+    }
+    
+    .share-media-phone__item-overlay {
+        @apply absolute hidden h-full w-full bg-black opacity-75 z-0;
+    }
+    
+    .share-media-phone__item-text{
+        @apply absolute inset-0 p-4 text-white text-base hidden z-10;
+    }
+
+    .news-section__featured-card-title {
+        @apply text-sm font-bold mt-2 mb-1 uppercase font-sub;
+    }
+    .news-section__featured-card-title:hover {
+        @apply text-primary;
+    }
+    
+    .news-section__news-card-title{
+        @apply font-sub text-sm font-bold mt-2;
+    }
+    .news-section__news-card-title:hover{
+        @apply text-primary;
+    }
+}
+
+
+@screen md {
+    .news-section__cards{
+        @apply flex flex-row w-full;
+    }
+    .news-section__featured-card{
+        @apply w-8/12;
+    }
+    .news-section__news-cards {
+        @apply w-4/12;
+    }
+    .news-section__news-card {
+        @apply flex flex-col items-start w-full ml-6 pr-6;
+    }
+    .news-section__news-card-imageWrapper {
+        @apply w-full mb-3;
+    }
+    .news-section__news-card-textWrapper{
+        @apply w-full mx-0 px-0;
+    }
+    .news-section__featured-card {
+        @apply mb-0;
+    }
+    
+    .news-section__news-card {
+        @apply mb-0;
+    }
+
+    .news-section__featured-card-title {
+        @apply text-base font-bold mt-2 mb-1 uppercase font-sub;
+    }
+    .news-section__featured-card-title:hover {
+        @apply text-primary;
+    }
+    
+    .news-section__news-card-title{
+        @apply font-sub text-base font-bold mt-2;
+    }
+    .news-section__news-card-title:hover{
+        @apply text-primary;
+    }
+    .section-title {
+        @apply text-2.5xl font-bold mb-8 font-sub;
+    }
+
+}
+
+
+
+
+@screen lg {
+
+    .section-title {
+        @apply text-3xl font-bold mb-9 font-sub;
+    }
+
+    .product-section-vertical {
+        @apply hidden;
+    }
+    .media-panel {
+        @apply relative flex flex-row w-full h-70vh;
+        background: #fff;
+    }
+    
+    .media-panel__text-wrapper {
+        @apply flex flex-col items-center justify-center w-1/2 h-full p-10 absolute;
+    }
+    
+    .media-panel__inner-text{
+        @apply w-full; 
+    }
+    
+    .media-panel__title{
+        @apply text-3xl font-bold mb-5;
+    }
+    
+    .media-panel__desc{
+        @apply text-base mb-10;
+    }
+    
+    .media-panel__image-wrapper{
+        @apply w-1/2 h-full absolute object-cover bg-contain bg-no-repeat;
+    }
+    
+    .media-panel__image{
+        @apply w-full h-full object-cover bg-contain bg-no-repeat;
+    }
+    .media-panel--full-image {
+        @apply bg-gray-900 text-white;
+    }
+    .media-panel--text-first .media-panel__text-wrapper{
+        @apply left-0;
+    }
+    .media-panel--text-first .media-panel__image-wrapper{
+        @apply right-0;
+    }
+    .media-panel--text-last .media-panel__text-wrapper{
+        @apply right-0;
+    }
+    .media-panel--text-last .media-panel__image-wrapper{
+        @apply left-0;
+    }
+    .media-panel--full-image .media-panel__image-wrapper{
+        @apply w-full h-auto;
+    }
+    .media-panel--full-image .media-panel__text-wrapper{
+        @apply absolute w-full;
+    }
+
+    .share-media__columns {
+        @apply flex flex-row w-full mx-auto;
+    }
+    
+    .share-media__column {
+        @apply flex flex-col w-1/4 h-auto overflow-hidden;
+    }
+    
+    .share-media__item {
+        @apply relative m-1 cursor-pointer overflow-hidden;
+    }
+    
+    .share-media__item:hover .share-media__item-overlay{
+        @apply block;
+    }
+    .share-media__item:hover .share-media__item-text{
+        @apply block;
+    }
+    
+    .share-media__item-overlay {
+        @apply absolute hidden h-full w-full bg-black opacity-75 z-0;
+    }
+    
+    .share-media__item-text{
+        @apply absolute inset-0 p-4 text-white text-base hidden z-10 font-main;
+    }
+}
+
+@screen xl {
+    .section-title {
+        @apply text-3xl font-bold mb-9.5 font-sub;
+    }
+}
